@@ -22,12 +22,6 @@ public class AvatarSquatController : MonoBehaviour
             return;
         }
 
-        if (obstacleSquat == null)
-        {
-            Debug.LogError("Veuillez assigner l'obstacle (Obstacle_squat) au script.");
-            return;
-        }
-
         if (mainCamera == null)
         {
             Debug.LogError("Veuillez assigner la caméra principale au script.");
@@ -40,18 +34,26 @@ public class AvatarSquatController : MonoBehaviour
 
     void Update()
     {
-        // Calculer la distance en Z entre la caméra et l'obstacle.
-        float distanceZ = obstacleSquat.position.z - mainCamera.transform.position.z;
-
-        if (distanceZ >= -2 && distanceZ < distanceThreshold)
+        // Vérifier si l'obstacle existe toujours avant de calculer la distance.
+        if (obstacleSquat != null)
         {
-            // Si la distance est valide, activer l'avatar et démarrer l'animation.
-            avatar.SetActive(true);
-            avatarAnimator.SetBool("IsSquatting", true);
+            float distanceZ = obstacleSquat.position.z - mainCamera.transform.position.z;
+
+            if (distanceZ >= -2 && distanceZ < distanceThreshold)
+            {
+                // Si la distance est valide, activer l'avatar et démarrer l'animation.
+                avatar.SetActive(true);
+                avatarAnimator.SetBool("IsSquatting", true);
+            }
+            else
+            {
+                // Si la distance est négative ou trop grande, désactiver l'avatar.
+                EndSquatSequence();
+            }
         }
         else
         {
-            // Si la distance est négative ou trop grande, désactiver l'avatar.
+            // Si l'obstacle a été détruit, désactiver l'avatar.
             EndSquatSequence();
         }
     }
