@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FloorMovement : MonoBehaviour
 {
-    public GameObject[] obstacles;
+    public ObstacleSpawner obstacleSpawner;
     private PlayerMovement player;
 
     // Start is called before the first frame update
@@ -18,12 +18,10 @@ public class FloorMovement : MonoBehaviour
     {
         if (transform.position.z <= player.minZ)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, player.resetZ);
-            GameObject obstacle = obstacles[UnityEngine.Random.Range(0, obstacles.Length)];
-            Instantiate(obstacle, new Vector3(transform.position.x, transform.position.y, player.resetZ - 20), obstacle.transform.rotation);
-            obstacle = obstacles[UnityEngine.Random.Range(0, obstacles.Length)];
-            Instantiate(obstacle, new Vector3(transform.position.x, transform.position.y, player.resetZ + 5), obstacle.transform.rotation);
-            Debug.Log(obstacle.transform.rotation);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + player.resetZ);
+            obstacleSpawner.SpawnObstacle();
+        }
+        else {             
         }
         transform.Translate(Vector3.back * player.speed * Time.deltaTime);
     }

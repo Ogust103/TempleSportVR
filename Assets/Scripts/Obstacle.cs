@@ -12,7 +12,11 @@ public class Obstacle : MonoBehaviour
     {
         player = FindObjectOfType<PlayerMovement>();
 
-        transform.position += new Vector3(Random.Range(-moveDistance, moveDistance), 0, 0);
+        Transform childTransform = transform.Find("Obstacle");
+        if (childTransform != null)
+        {
+            childTransform.localPosition += new Vector3(Random.Range(-moveDistance, moveDistance), 0, 0);
+        }
     }
 
     // Update is called once per frame
