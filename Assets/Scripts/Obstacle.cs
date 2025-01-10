@@ -28,4 +28,12 @@ public class Obstacle : MonoBehaviour
         }
         transform.position -= Vector3.forward * player.speed * Time.deltaTime;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player")) // Assure-toi que l'objet joueur a le tag "Player"
+        {
+            Debug.Log("Collision détectée avec le joueur !");
+        }
+    }
 }
