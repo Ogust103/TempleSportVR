@@ -16,13 +16,13 @@ public class FloorMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Destroy if out of range
         if (transform.position.z <= player.minZ)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + player.resetZ);
             obstacleSpawner.SpawnObstacle();
         }
-        else {             
-        }
+        //Move the floor at every frame
         transform.Translate(Vector3.back * player.speed * Time.deltaTime);
     }
 }

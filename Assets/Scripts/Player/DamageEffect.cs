@@ -1,37 +1,41 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DamageEffect : MonoBehaviour
 {
-    public Image damageImage; // Assignez l'image rouge ici dans l'éditeur
-    public float flashDuration = 0.5f; // Durée du flash
+    public Image damageImage; // Red Image
+    public float flashDuration = 0.5f; // Flash duration
+    public AudioClip damageSound;
 
-    private Color originalColor; // Couleur d'origine
+    private AudioSource audioSource;
+    private Color originalColor; // Original color
     private bool isFlashing;
 
     void Start()
     {
-        // Stockez la couleur d'origine (avec alpha à 0 pour transparence totale)
+        audioSource = GetComponent<AudioSource>();
+
+        // Get the original color (alpha = 0 for total transparency)
         originalColor = damageImage.color;
         originalColor.a = 0;
         damageImage.color = originalColor;
-    }
-
-    void Update()
-    {
-        // Vérifiez si la touche Espace est pressée
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TriggerDamageEffect();
-        }
     }
 
     public void TriggerDamageEffect()
     {
         if (!isFlashing)
         {
+            //Play animation
             StartCoroutine(FlashEffect());
+
+            //Play sound
+            if (damageSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(damageSound);
+                Debug.Log("Test");
+            }
         }
     }
 
@@ -40,22 +44,22 @@ public class DamageEffect : MonoBehaviour
         isFlashing = true;
         float elapsedTime = 0f;
 
-        // Augmenter l'opacité
+        // Increase opacity
         while (elapsedTime < flashDuration / 2)
         {
             elapsedTime += Time.deltaTime;
-            float alpha = Mathf.Lerp(0, 1, elapsedTime / (flashDuration / 2));
+            float alpha = Mathf.Lerp(0, 0.7f, elapsedTime / (flashDuration / 2));
             damageImage.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
             yield return null;
         }
 
         elapsedTime = 0f;
 
-        // Réduire l'opacité
+        // Reduce opacity
         while (elapsedTime < flashDuration / 2)
         {
             elapsedTime += Time.deltaTime;
-            float alpha = Mathf.Lerp(1, 0, elapsedTime / (flashDuration / 2));
+            float alpha = Mathf.Lerp(0.7f, 0, elapsedTime / (flashDuration / 2));
             damageImage.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
             yield return null;
         }

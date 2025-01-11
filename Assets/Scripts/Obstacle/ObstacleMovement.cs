@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class ObstacleMovement : MonoBehaviour
 {
     private PlayerMovement player;
     public float moveDistance;
@@ -12,6 +12,7 @@ public class Obstacle : MonoBehaviour
     {
         player = FindObjectOfType<PlayerMovement>();
 
+        //Move the obstacle on the path
         Transform childTransform = transform.Find("Obstacle");
         if (childTransform != null)
         {
@@ -22,18 +23,12 @@ public class Obstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Destroy if out of range
         if (transform.position.z <= player.minZ)
         {
             Destroy(gameObject);
         }
+        //Make the obstacle move at every frame
         transform.position -= Vector3.forward * player.speed * Time.deltaTime;
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player")) // Assure-toi que l'objet joueur a le tag "Player"
-        {
-            Debug.Log("Collision détectée avec le joueur !");
-        }
     }
 }

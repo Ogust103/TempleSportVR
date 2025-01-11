@@ -8,6 +8,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     public void SpawnObstacle()
     {
+        //Choose a random obstacle
         GameObject obstacle = obstacles[UnityEngine.Random.Range(0, obstacles.Length)];
         Instantiate(obstacle, new Vector3(transform.position.x, transform.position.y, transform.position.z), obstacle.transform.rotation);
     }
