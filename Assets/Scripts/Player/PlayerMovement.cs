@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float playerHeight;
+    private float playerDefaultHeight;
     public float speed;
     public float minZ;      //Define the z point where the plot come back to start
     public float resetZ;    //Define the lenght between the start and the end (25*number of plots)
@@ -12,18 +13,16 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Test pour gérer les différentes tailles
-        /*
-        Vector3 position = transform.position;
-        position.y = (1.7f + playerHeight) / 2 - 1.12f;
-        position.y = 100;
-        transform.position = position;
-        */
+        playerDefaultHeight = 1.7f;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public float PlayerDefaultHeight() { 
+        return playerDefaultHeight;
     }
 }

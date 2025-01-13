@@ -13,8 +13,7 @@ public class PlayerCollider : MonoBehaviour
     {
         player = FindObjectOfType<PlayerMovement>();
 
-        //Test pour gérer les différentes tailles
-        /*
+        //Adjust the capsule collider height to player height
         capsuleCollider = GetComponent<CapsuleCollider>();
 
         if (capsuleCollider != null)
@@ -24,7 +23,6 @@ public class PlayerCollider : MonoBehaviour
             capsulePosition.y = - (player.playerHeight/2 - 0.12f);
             capsuleCollider.center = capsulePosition;
         }
-        */
     }
 
     // Update is called once per frame

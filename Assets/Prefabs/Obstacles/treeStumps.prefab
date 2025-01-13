@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 5725710972411645875}
   m_Layer: 0
   m_Name: treeStumps
-  m_TagString: Untagged
+  m_TagString: DownObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49850b0497906e84ab9970e036b2bed9, type: 2}
+  - {fileID: 2131188, guid: 4e2dd32c733005a44b50004d673dc653, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -299,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 2743979817808275230}
   serializedVersion: 2
   m_LocalRotation: {x: 0.048181266, y: -0.9138906, z: -0.02122192, w: -0.40253234}
-  m_LocalPosition: {x: 2.69, y: -0.31, z: 1.2600002}
+  m_LocalPosition: {x: 2.69, y: -0.31, z: 0.34600025}
   m_LocalScale: {x: 0.8994792, y: 0.4610731, z: 0.9388636}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -507,7 +507,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49850b0497906e84ab9970e036b2bed9, type: 2}
+  - {fileID: 2131188, guid: 4e2dd32c733005a44b50004d673dc653, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 8351919276864691558}
   m_Layer: 0
   m_Name: transverseTrunks
-  m_TagString: Untagged
+  m_TagString: UpObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -791,7 +791,7 @@ Transform:
   m_GameObject: {fileID: 8257964804740823161}
   serializedVersion: 2
   m_LocalRotation: {x: -0.032006964, y: -0.31904733, z: -0.09454873, w: 0.9424675}
-  m_LocalPosition: {x: -3.99, y: -0.11, z: -0.25}
+  m_LocalPosition: {x: -3.99, y: -0.11, z: -1.164}
   m_LocalScale: {x: 0.45, y: 0.38495857, z: 0.45}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -942,9 +942,9 @@ Transform:
   m_GameObject: {fileID: 8752799414490780260}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8461739918981069535}
   - {fileID: 4476727709610062465}
@@ -1044,7 +1044,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49850b0497906e84ab9970e036b2bed9, type: 2}
+  - {fileID: 2131188, guid: 4e2dd32c733005a44b50004d673dc653, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
