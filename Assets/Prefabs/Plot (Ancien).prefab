@@ -7883,7 +7883,7 @@ GameObject:
   - component: {fileID: 5898764796565328975}
   - component: {fileID: -7649930701552948621}
   m_Layer: 0
-  m_Name: Plot
+  m_Name: Plot (Ancien)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
