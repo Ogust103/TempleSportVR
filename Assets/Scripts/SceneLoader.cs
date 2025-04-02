@@ -10,7 +10,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadMenuScene()
     {
-        SceneManager.LoadScene("MainMenu"); // Remplace "MenuScene" par le nom exact de ta scène du menu
+        SceneManager.LoadScene("Game"); // Remplace "MenuScene" par le nom exact de ta scène du menu
     }
 
     public void QuitGame()
