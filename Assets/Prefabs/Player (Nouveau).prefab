@@ -781,6 +781,7 @@ MonoBehaviour:
   m_HitDetectionType: 0
   m_SphereCastRadius: 0.1
   m_ConeCastAngle: 6
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1206,6 +1207,7 @@ MonoBehaviour:
   m_RepeatRate: 0.1
   m_TrackedDeviceDragThresholdMultiplier: 2
   m_TrackedScrollDeltaMultiplier: 5
+  m_BypassUIToolkitEvents: 0
   m_ActiveInputMode: 1
   m_MaxTrackedDeviceRaycastDistance: 1000
   m_EnableXRInput: 1
@@ -2846,6 +2848,7 @@ MonoBehaviour:
   m_HitDetectionType: 2
   m_SphereCastRadius: 0.0125
   m_ConeCastAngle: 3
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 2147483681
@@ -3662,6 +3665,7 @@ MonoBehaviour:
   speed: 4
   minZ: -30
   resetZ: 125
+  playerTransform: {fileID: 0}
 --- !u!114 &8632018541199560832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3674,6 +3678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7d7ef3a90b8834bbbb3b9908163108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  knockbackDistance: 1
   damageImage: {fileID: 8848561219780555485}
   flashDuration: 0.5
   damageSound: {fileID: 8300000, guid: d18713a609d1a404596125942ae8a882, type: 3}
@@ -3988,6 +3994,7 @@ MonoBehaviour:
   m_HitDetectionType: 0
   m_SphereCastRadius: 0.1
   m_ConeCastAngle: 6
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 2147483681
@@ -4652,6 +4659,7 @@ MonoBehaviour:
   m_HitDetectionType: 2
   m_SphereCastRadius: 0.0125
   m_ConeCastAngle: 3
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 2147483681
@@ -5342,6 +5350,7 @@ MonoBehaviour:
   m_HitDetectionType: 0
   m_SphereCastRadius: 0.1
   m_ConeCastAngle: 6
+  m_LiveConeCastDebugVisuals: 0
   m_RaycastMask:
     serializedVersion: 2
     m_Bits: 2147483681
