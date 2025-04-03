@@ -1299,7 +1299,6 @@ GameObject:
   - component: {fileID: 131138000}
   - component: {fileID: 131137999}
   - component: {fileID: 131137998}
-  - component: {fileID: 131137997}
   m_Layer: 5
   m_Name: back
   m_TagString: Untagged
@@ -1326,24 +1325,6 @@ RectTransform:
   m_AnchoredPosition: {x: 4.0000014, y: 6.000002}
   m_SizeDelta: {x: 12, y: 8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &131137997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131137995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e64f953b86cd045ae2249312298ae6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cards:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  buttonLeft: {fileID: 0}
-  buttonRight: {fileID: 0}
 --- !u!114 &131137998
 MonoBehaviour:
   m_ObjectHideFlags: 0
