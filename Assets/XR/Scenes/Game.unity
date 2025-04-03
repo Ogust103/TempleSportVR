@@ -13576,16 +13576,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5386762086887812687, guid: b1ee3cad54c46874ebb1b231af504b34, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5386762086887812687, guid: b1ee3cad54c46874ebb1b231af504b34, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5386762086887812687, guid: b1ee3cad54c46874ebb1b231af504b34, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: bf1bbd93bee528b4f88b8ca85a26142a, type: 3}
+      objectReference: {fileID: 8300000, guid: d18713a609d1a404596125942ae8a882, type: 3}
     - target: {fileID: 5502968750765569470, guid: b1ee3cad54c46874ebb1b231af504b34, type: 3}
       propertyPath: m_Name
       value: XR Interaction Setup (Player)
