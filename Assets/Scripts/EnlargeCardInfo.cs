@@ -5,9 +5,9 @@ using UnityEngine;
 public class EnlargeCardInfo : MonoBehaviour
 {
     public Transform cameraTransform;
-    public float thresholdDistance = 1f;
-    public float nearScale = 2f;
-    public float farScale = 1f;
+    public float thresholdDistance = 0.4f;
+    public float nearScale = 0.01f;
+    public float farScale = 0.003f;
 
     void Update()
     {

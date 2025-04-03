@@ -15,7 +15,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerDefaultHeight = 1.7f;
+        playerDefaultHeight = PlayerData.height;
+        Debug.Log(playerDefaultHeight);
     }
 
     // Update is called once per frame
