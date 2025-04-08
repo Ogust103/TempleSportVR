@@ -18,7 +18,6 @@ public class DamageEffect : MonoBehaviour
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
 
         // Get the original color (alpha = 0 for total transparency)
         originalColor = damageImage.color;
