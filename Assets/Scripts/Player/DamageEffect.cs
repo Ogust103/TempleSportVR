@@ -11,8 +11,8 @@ public class DamageEffect : MonoBehaviour
     public Image damageImage; // Red Image
     public float flashDuration = 0.5f; // Flash duration
     public AudioClip damageSound;
+    public AudioSource audioSource;
 
-    private AudioSource audioSource;
     private Color originalColor; // Original color
     private bool isFlashing;
 
@@ -38,7 +38,6 @@ public class DamageEffect : MonoBehaviour
             if (damageSound != null && audioSource != null)
             {
                 audioSource.PlayOneShot(damageSound);
-                Debug.Log("Test");
             }
         }
     }

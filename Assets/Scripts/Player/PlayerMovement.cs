@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerHeight;
     private float playerDefaultHeight;
     public float speed;
+    public float acceleration = 0.01f;
     public float minZ;      //Define the z point where the plot come back to start
     public float resetZ;    //Define the lenght between the start and the end (25*number of plots)
 
@@ -15,13 +16,16 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerDefaultHeight = PlayerData.height;
+        playerHeight = PlayerData.height;
+        playerDefaultHeight = 1.7f;
         Debug.Log(playerDefaultHeight);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (speed != 0) speed += acceleration * Time.deltaTime;
+
         if (playerTransform.position.z < 0f)
         {
             float step = speed/50 * Time.deltaTime;
