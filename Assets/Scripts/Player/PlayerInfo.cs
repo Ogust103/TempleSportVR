@@ -90,4 +90,8 @@ public class PlayerInfo : MonoBehaviour
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene("MainMenu");
     }
+
+    public float Temp {
+        get {return temp; }
+    }
 }

@@ -20,7 +20,7 @@ public class ObstacleMovement : MonoBehaviour
             childTransform.localPosition += new Vector3(Random.Range(-moveDistance, moveDistance), 0, 0);
 
             //Adjust scale of the obstacle with the height of the player
-            float ratio = player.playerHeight / player.PlayerDefaultHeight();
+            float ratio = player.playerHeight / player.PlayerDefaultHeight;
             Vector3 scale = childTransform.localScale;
             scale.y *= ratio;
             scale.z *= ratio;

@@ -13,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform playerTransform;
 
+    private float boostTimer = 0f;
+    private bool boostActive = false;
+    private float speedDivisor = 50f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (playerTransform.position.z < 0f)
         {
-            float step = speed/50 * Time.deltaTime;
+            float step = speed/speedDivisor * Time.deltaTime;
             playerTransform.Translate(Vector3.forward * step);
 
             // Clamp si dépasse 0
@@ -39,9 +43,29 @@ public class PlayerMovement : MonoBehaviour
                 playerTransform.position = pos;
             }
         }
+
+        // Boost
+        if (boostActive)
+        {
+            boostTimer += Time.deltaTime;
+
+            speedDivisor = 1f;
+
+            if (boostTimer >= 2f)
+            {
+                speedDivisor = 50f;
+                boostActive = false;
+            }
+        }
     }
 
-    public float PlayerDefaultHeight() { 
-        return playerDefaultHeight;
+    public float PlayerDefaultHeight { 
+        get {return playerDefaultHeight; }
+    }
+
+    public void Boost()
+    {
+        boostTimer = 0f;
+        boostActive = true;
     }
 }

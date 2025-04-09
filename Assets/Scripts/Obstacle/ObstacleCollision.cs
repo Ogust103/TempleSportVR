@@ -17,7 +17,7 @@ public class ObstacleCollision : MonoBehaviour
         //Play the animation when the phayer hit an obstacle
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Trigger détecté avec : " + other.gameObject.name);
+            //Debug.Log("Trigger détecté avec : " + other.gameObject.name);
             damage.TriggerDamageEffect();
         }
     }

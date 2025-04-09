@@ -22,9 +22,9 @@ public class RunningSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float y = cameraTransform.position.y;
-        float minY = 0.9f * player.playerHeight;
-        float maxY = 1.1f * player.playerHeight;
+        float y = cameraTransform.position.y + 0.12f;
+        float minY = 0.95f * player.playerHeight;
+        float maxY = 1.05f * player.playerHeight;
         float speed = player.speed;
 
         if (((y < minY || y > maxY) || speed == 0f) && runningAudio.isPlaying)

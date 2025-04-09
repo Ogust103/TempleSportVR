@@ -5,6 +5,7 @@ using UnityEngine;
 public class FloorMovement : MonoBehaviour
 {
     public ObstacleSpawner obstacleSpawner;
+    public ObjectSpawner objectSpawner;
     private PlayerMovement player;
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class FloorMovement : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + player.resetZ);
             obstacleSpawner.SpawnObstacle();
+            objectSpawner.SpawnObject();
         }
         //Move the floor at every frame
         transform.Translate(Vector3.back * player.speed * Time.deltaTime);
