@@ -10,7 +10,7 @@ public class HighScores : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        List<float> highscores = PlayerData.highscores;
+        List<float> highscores = PlayerData.GetHighscores();
         string text = "";
         for (int i = 0; i < highscores.Count && i < 10; i++)
         {

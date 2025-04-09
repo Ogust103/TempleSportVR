@@ -12,7 +12,7 @@ public class ObstacleMovement : MonoBehaviour
     {
         player = FindObjectOfType<PlayerMovement>();
 
-        
+
         Transform childTransform = transform.Find("Obstacle");
         if (childTransform != null)
         {
@@ -25,28 +25,6 @@ public class ObstacleMovement : MonoBehaviour
             scale.y *= ratio;
             scale.z *= ratio;
             childTransform.localScale = scale;
-
-
-
-            //Get the extremal position of the collider
-            /*
-            Collider childCollider = childTransform.GetComponent<Collider>();
-            if (childCollider != null)
-            {
-                string obstacleType = this.tag;
-                float ratio = player.playerHeight/player.PlayerDefaultHeight();
-                switch (obstacleType)
-                {
-                    case "UpObstacle":
-
-                        Debug.Log($"Coordonée min : {childCollider.bounds.min.y}");
-                        break;
-                    case "DownObstacle":
-                        Debug.Log($"Coordonée max : {childCollider.bounds.max.y}");
-                        break;
-                }
-            }
-            */
         }
     }
 

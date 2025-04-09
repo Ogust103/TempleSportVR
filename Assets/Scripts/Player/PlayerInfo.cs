@@ -80,7 +80,7 @@ public class PlayerInfo : MonoBehaviour
         player.speed = 0;
         deathCanva.gameObject.SetActive(true);
         deathText.text = "Score : " + score.ToString("F0");
-        PlayerData.highscores.Add(score);
+        PlayerData.AddHighscore(score);
 
         StartCoroutine(LoadMainMenuAfterDelay(10f));
     }
